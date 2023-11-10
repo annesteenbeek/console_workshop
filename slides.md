@@ -29,9 +29,6 @@ Requirements
 - Git installed
 - TMUX installed
 
-## If you already have zsh and/or tmux installed
-- backup your `~/.zshrc` and `~/.tmux.conf`
-
 
 
 <!-- column: 1 -->
@@ -39,28 +36,33 @@ Requirements
 **Ubuntu**
 ```shell
 $ sudo apt update
-$ sudo apt install zsh tmux -y
+$ sudo apt install curl git zsh tmux -y
 $ chsh -s $(which zsh) # make ZSH default shell (optional)
 ```
 
 **OSX**
 ```shell
-$ brew install tmux
+$ brew install tmux git curl
 ```
 
 <!-- reset_layout -->
+
+## If you already have zsh and/or tmux installed
+- backup your `~/.zshrc` and `~/.tmux.conf`
+
+
 <!-- end_slide -->
 
 ZSH Plugin Manager
 ----------------------------------------------------------------
-<!-- column_layout: [1, 1] -->
+<!-- column_layout: [2, 1] -->
 
 <!-- column: 0 -->
 # We use antigen to handle plugins
 * webpage: https://github.com/zsh-users/antigen
 * `$ mkdir ~/.antigen`
 * `$ curl -L git.io/antigen > ~/.antigen/antigen.zsh`
-* **Magic**
+* ✨ **Magic** ✨
 
 
 <!-- column: 1 -->
