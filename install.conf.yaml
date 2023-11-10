@@ -1,7 +1,11 @@
+- defaults:
+    link:
+      relink: true
+
 - clean: []
 - link: 
-  ~/.tmux.conf: files/tmux.conf
-  ~/.zshrc: files/zshrc
+    ~/.tmux.conf: files/tmux.conf
+    ~/.zshrc: files/zshrc
 - create:
   - ~/.antigen
 - shell: 
