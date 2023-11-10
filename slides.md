@@ -46,12 +46,33 @@ $ brew install tmux git curl
 ```
 
 <!-- reset_layout -->
+<!-- end_slide -->
 
-## If you already have zsh and/or tmux installed
-- backup your `~/.zshrc` and `~/.tmux.conf`
+Managing your dotfiles
+----------------------------------------------------------------
 
+# Check out the repo!
+It is important to be able to manage your dotfiles correctly. \
+This allows you to use the same configuration accross all your devices. \
+Use version control to keep them in sync. 
+
+* Navigate to [](https://github.com/annesteenbeek/console_workshop)
+* Use this template (or just clone it if you don't have a github account)
+* Name it something like dotfiles
+* Clone it in your home directory: `$ cd ~ && git clone https://github.com/YOU/dotfiles`
+* Open it in your favorite code editor (like vim)
+* backup your `~/.zshrc` and `~/.tmux.conf` if you already have them
+<!-- pause -->
+* Run it: `$ ./dotfiles/install`
+
+
+## How it works
+- It pulls the dotbot submodule
+- It runs dotbot script to run install scripts
+- It creates symlinks to your home directory
 
 <!-- end_slide -->
+
 
 ZSH Plugin Manager
 ----------------------------------------------------------------
@@ -59,7 +80,7 @@ ZSH Plugin Manager
 
 <!-- column: 0 -->
 # We use antigen to handle plugins
-* webpage: https://github.com/zsh-users/antigen
+* webpage: [](https://github.com/zsh-users/antigen)
 * `$ mkdir ~/.antigen`
 * `$ curl -L git.io/antigen > ~/.antigen/antigen.zsh`
 * ✨ **Magic** ✨
@@ -117,7 +138,7 @@ But none are as complete as SpaceShip Prompt
 <!-- pause -->
 ## Configuration (you can skip this)
 It has a lot of configuration options
-Webpage: https://spaceship-prompt.sh/config/intro/
+Webpage: [](https://spaceship-prompt.sh/config/intro/)
 
 Example
 `$ touch ~/.spaceshiprc.zsh`
@@ -146,7 +167,7 @@ ZSH Autosuggestions
 # Never double type a command again
 * Provides autosuggestions
 * Accept suggestion with `ctrl+e`
-* webpage: https://github.com/zsh-users/zsh-autosuggestions
+* webpage: [](https://github.com/zsh-users/zsh-autosuggestions)
 
 <!-- column: 1 -->
 **~/.zshrc**
@@ -266,9 +287,10 @@ ZSH tips and general tips
 * `ctrl+x e` to edit current command (remap with: bindkey '^x' edit-command-line)
 * `curl ifconfig.me` to get current public IP
 * `wormhole send` and `wormhole receive` to easily transfer files (`sudo apt install python-wormhole`)
+* You can fuzzy autocomplete paths with tab, example: `cd /l/s/s →` will autocomplete to `cd /lib/systemd/system/`
 
 # Other nice ZSH plugins:
-Check them out at: https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
+Check them out at: [](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins)
 Or google for awsome lists.
 My tips:
 - zsh-users/zsh-completions (more autocomplete suggestions)
@@ -278,12 +300,12 @@ My tips:
 - command-not-found (suggest package on command not found)
 
 # Other cool tools:
-- Ranger: a file explorer for in your terminal [https://github.com/ranger/ranger]
-- LSD: an alternative and better ls [https://github.com/lsd-rs/lsd]
-- bat: a better cat [https://github.com/sharkdp/bat]
+- Ranger: a file explorer for in your terminal [](https://github.com/ranger/ranger)
+- LSD: an alternative and better ls [](https://github.com/lsd-rs/lsd)
+- bat: a better cat [](https://github.com/sharkdp/bat)
 
 # General tips
-- `tab` is your friend, use it! (fuzzy autocomplete)
+- `tab` is your friend, use it! 
 - `ctrl-r` is your friend
 - Try to not use your mouse, it WILL become easyer
 - Learn a little bit vim bindings (hjkl gg G :q! /), it works everywhere
