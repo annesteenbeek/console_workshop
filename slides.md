@@ -409,14 +409,64 @@ Tmux has 3 basic levels of splitting
 
 <!-- end_slide -->
 
-
-
-Template
+Tmux Plugin Manager
 ----------------------------------------------------------------
 <!-- column_layout: [1, 1] -->
+<!-- column: 0 -->
+Ofcourse Tmux also needs plugins!
 
+For this we use TPM: 
+```shell
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+You can find more awsome tmux plugins and themes here: [](https://github.com/rothgar/awesome-tmux)
+
+Some of these might require NerdFonts [](https://www.nerdfonts.com/) in order to look pretty. (Try Hack Font)
+
+Then try a theme like `set -g @plugin "nordtheme/tmux"`
+<!-- column: 1 -->
+**~/.tmux.conf**
+```shell
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# change prefix to backtick
+unbind-key C-b
+set-option -g prefix `
+bind-key ` send-prefix
+
+# split panes using | and -
+bind | split-window -h
+bind - split-window -v
+unbind '"'
+unbind %
+
+# bind reload conf to prefix-r
+bind r source-file ~/.tmux.conf \; display "Reloaded config"
+
+# enable mouse
+set -g mouse on
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+```
+To apply: restart Tmux,  or thereafter `prefix-r`
+Install plugins: `prefix-I`
+
+<!-- reset_layout -->
+<!-- end_slide -->
+
+Thank you
+----------------------------------------------------------------
+<!-- column_layout: [1, 1, 1] -->
 <!-- column: 0 -->
 <!-- column: 1 -->
+Thank you for your time.
+
+Try stuff out, experiment, everything is possible.
+
 
 <!-- reset_layout -->
 <!-- end_slide -->
